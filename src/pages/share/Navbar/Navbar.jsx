@@ -29,7 +29,7 @@ const Navbar = () => {
        
        <img className="w-10 mx-2" src=""  alt="" />
 
-        <Link to={'/'} className="text-4xl font-bold">Toy</Link>
+        <Link to={'/'} className="text-4xl font-bold">SportsToy</Link>
         <div className="navbar-end">
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -204,7 +204,7 @@ const Navbar = () => {
         <div className="navbar-end mr-20">
         {
             user &&
-            <img className="h-20 w-20  rounded-full" src={user? user.photoURL: ""} />
+            <img className="h-20 w-20  rounded-full" title={user?.displayName} src={user? user.photoURL: ""} />
         }
        
         </div>
