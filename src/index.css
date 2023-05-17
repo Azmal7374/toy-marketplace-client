@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.active{
+    @apply font-medium tracking-wide text-orange-600 transition-colors duration-200 hover:text-orange-400
+  }
+  
+  .default{
+    @apply font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-400
+  }
+
+
+
+  
+/* .my-container{
+    @apply  px-4  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8
+} */

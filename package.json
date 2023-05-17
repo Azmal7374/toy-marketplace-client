@@ -10,6 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@heroicons/react": "^2.0.18",
     "daisyui": "^2.51.6",
     "firebase": "^9.22.0",
     "localforage": "^1.10.0",
@@ -17,7 +21,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.2",
-    "sort-by": "^1.2.0"
+    "sort-by": "^1.2.0",
+    "sweetalert2": "^11.7.5"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
