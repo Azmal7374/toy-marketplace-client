@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Rating } from '@smastrom/react-rating';
 import '@smastrom/react-rating/style.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../provider/AuthProvider';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Toy = ({toy}) => {
-    const {_id, name, price,picture,ratting} =toy
+    const {_id, name, price,picture,ratting} =toy;
+    const {user} =useContext(AuthContext)
+    const navigate = useNavigate()
+
+    const hanldeDetails = () =>{
+        if(!user){
+          toast('Please Login Here!')
+           navigate('/login')
+        }
+    }
     return (
         
         <div className= "px-8">
@@ -22,7 +35,7 @@ const Toy = ({toy}) => {
         </div>
         <div className="text-center mt-2">
         <Link>
-        <button className="bg-[#0d80a5] text-white p-2 w-32 rounded-md  ">View Details</button>
+        <button onClick={hanldeDetails} className="bg-[#0d80a5] text-white p-2 w-32 rounded-md  ">View Details</button>
         </Link>
         </div>
       </div>
