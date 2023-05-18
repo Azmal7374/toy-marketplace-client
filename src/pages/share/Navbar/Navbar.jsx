@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash, faUser, faMessage, faGear, faLock, faArrowRightFromBracket, faPlus } from "@fortawesome/free-solid-svg-icons"; 
 import useTitle from "../../../hooks/UseTitle";
 import { AuthContext } from "../../../provider/AuthProvider";
-
+import logo from "../../../assets/logo.png"
 const Navbar = () => {
   useTitle('Navbar')
   const { user, logOut } = useContext(AuthContext);
@@ -27,9 +27,9 @@ const Navbar = () => {
     <div className=" sticky top-0 z-30 bg-white">
       <div className="navbar ml-12 ">
        
-       <img className="w-10 mx-2" src=""  alt="" />
+       <img className="w- mx-2" src={logo}  alt="" />
 
-        <Link to={'/'} className="text-4xl font-bold">SportsToy</Link>
+      
         <div className="navbar-end">
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
