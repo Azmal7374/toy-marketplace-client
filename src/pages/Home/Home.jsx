@@ -17,7 +17,7 @@ const Home = () => {
         <h2 className='ml-10 mr-10 text-gray-600 mt-4'>Online shopping for Toys & Games from a great selection of Toy Basketball, Toy Golf, Toy Soccer, Toy Football, Toy Baseball, Toy Hockey & more at everyday.Based on the original concept created by Gixer Entertainment , Toy Sports is a fun party game for the whole family.
         </h2>
        <div className='ml-10 mr-10'>
-       <button  className='bg-gray-600 p-3 w-40  rounded-md mt-8 text-white font-bold hover:bg-gray-700'>Shop Now</button>
+       <button  className='bg-[#0d80a5] p-3 w-40  rounded-md mt-8 text-white font-bold  '>Shop Now</button>
        </div>
         </div>
         <div className="mt-10">

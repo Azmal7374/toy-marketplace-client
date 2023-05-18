@@ -24,19 +24,19 @@ const Toys = () => {
               <div>
                 <button  onClick={() => handleTabClick("softToys")}
                 className={`border rounded-md p-4 ${
-                  activeTab == "softToys" ? " bg-purple-500  text-white" : ""
+                  activeTab == "softToys" ? " bg-[#0d80a5]  text-white" : ""
                 }`}>Soft Toys</button>
               </div>
               <div>
               <button  onClick={() => handleTabClick("arts&Crafts")}
               className={` border  rounded-md p-4 ${
-                activeTab == "arts&Crafts" ? " bg-purple-500 text-white" : ""
+                activeTab == "arts&Crafts" ? " bg-[#0d80a5] text-white" : ""
               }`}>Arts & Crafts</button>
             </div>
             <div>
             <button  onClick={() => handleTabClick("toddlerToys")}
             className={`border   rounded-md p-4 ${
-              activeTab == "toddlerToys" ? " bg-purple-500 text-white" : ""
+              activeTab == "toddlerToys" ? " bg-[#0d80a5] text-white" : ""
             }`}>Toddler Toys</button>
           </div>
             </div>

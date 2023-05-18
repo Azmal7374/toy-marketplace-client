@@ -22,7 +22,7 @@ const Toy = ({toy}) => {
         </div>
         <div className="text-center mt-2">
         <Link>
-        <button className="bg-purple-600 text-white p-2 w-32 rounded-md hover:bg-purple-700">View Details</button>
+        <button className="bg-[#0d80a5] text-white p-2 w-32 rounded-md  ">View Details</button>
         </Link>
         </div>
       </div>
