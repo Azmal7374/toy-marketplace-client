@@ -2,6 +2,9 @@ import React from 'react';
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/custom-animations/cube-animation.css';
 import 'react-awesome-slider/dist/styles.css';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+import Toys from '../Toys/Toys';
 const Home = () => {
     return (
         <div>
@@ -25,6 +28,12 @@ const Home = () => {
       </AwesomeSlider>
         </div>
         </div>
+          </section>
+
+
+          <section className='mt-10'>
+          <h2 className='text-center text-3xl font-bold'>Shop By Category</h2>
+          <Toys></Toys>
           </section>
         </div>
     );
