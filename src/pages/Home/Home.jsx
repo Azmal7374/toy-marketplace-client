@@ -5,7 +5,9 @@ import 'react-awesome-slider/dist/styles.css';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Toys from '../Toys/Toys';
+import useTitle from '../../hooks/UseTitle';
 const Home = () => {
+  useTitle('Home');
     return (
         <div>
         <section className="bg-white">
