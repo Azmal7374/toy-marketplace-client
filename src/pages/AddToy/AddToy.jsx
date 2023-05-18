@@ -27,8 +27,8 @@ const AddToy = () => {
 
 
   return (
-    <div className="mt-10 p-8 bg-slate-200">
-    <form className="" onSubmit={handleSubmit(onSubmit)}>npm install --save react-rating
+    <div className="flex justify-center mt-10 p-8 bg-slate-200">
+    <form className="" onSubmit={handleSubmit(onSubmit)}>
     
    <div className="mt-4">
     
@@ -36,10 +36,12 @@ const AddToy = () => {
    </div>
    <div className="mt-4">
     
-   <input className="w-96 p-4" {...register("eamil")} placeholder="Email"/>
+   <input className="w-96 p-4" {...register("sellerName")} defaultValue={user?.displayName}   placeholder="Seller Name"/>
    </div>
    <div className="mt-4">
-    
+   <input className="w-96 p-4" {...register("sellerEamil")} defaultValue={user?.email}  placeholder="Seller Email"/>
+   </div>
+   <div className="mt-4">
    <input className="w-96 p-4" {...register("picture")} placeholder="Picture"/>
    </div>
 
@@ -63,7 +65,7 @@ const AddToy = () => {
    <option value="toddlerToys">Toddler Toys</option>
  </select>
    </div>
-    <input className="mt-5 bg-purple-500 btn-wide p-4 rounded-md" type="submit" value="Post Toy" />
+    <input className=" bg-[#0d80a5] mt-5 btn-wide p-4 rounded-md text-white font-bold" type="submit" value="Post A Toy" />
   </form>
     </div>
   );
