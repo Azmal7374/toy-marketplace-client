@@ -3,7 +3,8 @@ import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import CreatableSelect from "react-select/creatable";
 import { AuthContext } from "../../provider/AuthProvider";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const AddToy = () => {
   const { user } = useContext(AuthContext);
   const { register, handleSubmit } = useForm();
@@ -20,6 +21,9 @@ const AddToy = () => {
       .then(res =>res.json())
       .then(result=>{
         console.log(result);
+        if(result.insertedId){
+          toast('Successfully Added!')
+        }
       })
     console.log(data);
   }
