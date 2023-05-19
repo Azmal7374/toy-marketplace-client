@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Toy from '../Toy/Toy';
 import { AuthContext } from '../../provider/AuthProvider';
+import Sppiner from '../share/Spinner/Sppiner';
 
 const AllToys = () => {
     const [searchText, setSearchText] = useState("");
-    const{user} = useContext(AuthContext)
+    const{user, loading} = useContext(AuthContext)
     const [toys, setToys] =useState([])
     useEffect(()=>{
         fetch('http://localhost:5000/allToys')
@@ -22,6 +23,12 @@ const AllToys = () => {
             setToys(data);
           });
       };
+
+      if(loading){
+       
+       return <Sppiner></Sppiner>
+       
+      }
 
     return (
 

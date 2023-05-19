@@ -25,6 +25,7 @@
     "react-hook-form": "^7.43.9",
     "react-hot-toast": "^2.4.1",
     "react-image-gallery": "^1.2.11",
+    "react-loader-spinner": "^5.3.4",
     "react-rating": "^2.0.5",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.11.2",

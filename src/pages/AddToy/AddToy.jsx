@@ -58,6 +58,12 @@ const AddToy = () => {
    <div className="mt-4">
    <input className=" p-4" {...register("quatntiy")} placeholder="Available Quantity"/>
    </div>
+
+   <div className="mt-4">
+   <textarea className="w-96 p-4" {...register("description")} placeholder="Detail Description"/>
+   </div>
+
+
    <div>
    <select className="mt-4 p-4" {...register("subCategory")}>
    <option value="softToys">Soft Toys</option>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/custom-animations/cube-animation.css';
 import 'react-awesome-slider/dist/styles.css';
@@ -6,8 +6,14 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Toys from '../Toys/Toys';
 import useTitle from '../../hooks/UseTitle';
+import { AuthContext } from '../../provider/AuthProvider';
+import Sppiner from '../share/Spinner/Sppiner';
 const Home = () => {
   useTitle('Home');
+  const {user, loading} =useContext(AuthContext)
+  if(loading){
+    return <Sppiner></Sppiner>
+  }
     return (
         <div>
         <section className="bg-white">
