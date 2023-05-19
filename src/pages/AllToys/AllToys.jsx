@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import Toy from '../Toy/Toy';
 import { AuthContext } from '../../provider/AuthProvider';
 import Sppiner from '../share/Spinner/Sppiner';
+import { Link } from 'react-router-dom';
 
 const AllToys = () => {
     const [searchText, setSearchText] = useState("");
@@ -67,7 +68,7 @@ const AllToys = () => {
            <th>{toy.subCategory}</th> 
            <th>{toy.price}</th> 
            <th>{toy.quatntiy}</th> 
-           <th><button  className="bg-[#0d80a5] p-1 w-24 rounded-md text-white">Details</button></th>
+           <th> <Link to=''><button  className="bg-[#0d80a5] p-1 w-24 rounded-md text-white">Details</button></Link> </th>
           </tr>
            </>
           ))}  

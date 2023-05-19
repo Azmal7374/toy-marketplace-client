@@ -34,7 +34,7 @@ const Toy = ({toy}) => {
         <p className='font-bold'>${price}</p>
         </div>
         <div className="text-center mt-2">
-        <Link>
+        <Link to={`/allToys/${_id}`}>
         <button onClick={hanldeDetails} className="bg-[#0d80a5] text-white p-2 w-32 rounded-md  ">View Details</button>
         </Link>
         </div>
