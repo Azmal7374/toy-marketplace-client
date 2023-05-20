@@ -3,8 +3,10 @@ import Toy from '../Toy/Toy';
 import { AuthContext } from '../../provider/AuthProvider';
 import Sppiner from '../share/Spinner/Sppiner';
 import { Link } from 'react-router-dom';
+import useTitle from '../../hooks/UseTitle';
 
 const AllToys = () => {
+  useTitle('All Toys');
     const [searchText, setSearchText] = useState("");
     const{user, loading} = useContext(AuthContext)
     const [toys, setToys] =useState([])
@@ -63,12 +65,12 @@ const AllToys = () => {
            <>
            <tr>
            <th>{index + 1}</th> 
-           <th>{user?.displayName}</th> 
+           <th>{toy.sellerName}</th> 
            <th>{toy.name}</th> 
            <th>{toy.subCategory}</th> 
            <th>{toy.price}</th> 
            <th>{toy.quatntiy}</th> 
-           <th> <Link to=''><button  className="bg-[#0d80a5] p-1 w-24 rounded-md text-white">Details</button></Link> </th>
+           <th> <Link to={`/allToys/${toy._id}`}><button  className="bg-[#0d80a5] p-1 w-24 rounded-md text-white">Details</button></Link> </th>
           </tr>
            </>
           ))}  
