@@ -20,6 +20,9 @@ const MyToys = () => {
       });
   }, [user]);
   console.log(toys)
+
+
+
   if (loading) {
     return <Sppiner></Sppiner>;
   }
@@ -56,7 +59,7 @@ const MyToys = () => {
                     <th>{toy.quatntiy}</th>
                     <th>{toy.description.slice(0,25)}...</th>
                     <th>
-                      <Link to='/UpdateToy'>
+                      <Link to={`/UpdateToy/${toy?._id}`}>
                         <button
                           className="bg-[#0d80a5] p-1 w-24 rounded-md text-white"
                           htmlFor="my-modal-6"
@@ -64,6 +67,7 @@ const MyToys = () => {
                           Edit
                         </button>
                       </Link>
+                      
                     </th>
                     <th>
                       {" "}
