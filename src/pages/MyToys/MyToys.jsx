@@ -7,12 +7,17 @@ import useTitle from "../../hooks/UseTitle";
 import UpdateToy from "../UpdateToy/UpdateToy";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Swal from "sweetalert2";
+
 const MyToys = () => {
   useTitle("My Toys");
   const { user, loading } = useContext(AuthContext);
   const [modalShow, setModalShow] = React.useState(false);
   const[control, setControl] = useState(false);
   const [toys, setToys] = useState([]);
+
+  // const proceed = confirm("Are you sure you want to delete");
+
   useEffect(() => {
     fetch(`http://localhost:5000/myToys/${user?.email}`)
       .then((res) => res.json())
@@ -23,9 +28,43 @@ const MyToys = () => {
   console.log(toys)
 
   const handleDelete = (id) => {
-    const proceed = confirm("Are you sure you want to delete");
+   
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: ' p-3  bg-[#0d80a5] text-white rounded -md mx-4',
+        cancelButton: ' p-3 bg-[#0d80a5] ml-2 text-white rounded-md'
+      },
+      buttonsStyling: false
+    })
+    
+    swalWithBootstrapButtons.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, delete it!',
+      cancelButtonText: 'No, cancel!',
+      reverseButtons: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+        swalWithBootstrapButtons.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        )
+      } else if (
+        /* Read more about handling dismissals below */
+        result.dismiss === Swal.DismissReason.cancel
+      ) {
+        swalWithBootstrapButtons.fire(
+          'Cancelled',
+          'Your imaginary file is safe :)',
+          'error'
+        )
+      }
+    })
 
-    if (proceed) {
+    if (swalWithBootstrapButtons === true) {
       fetch(`http://localhost:5000/allToys/${id}`, {
         method: "DELETE",
       })
@@ -33,7 +72,6 @@ const MyToys = () => {
         .then((data) => {
           console.log(data);
           if (data.deletedCount > 0) {
-            toast('Successfully Deleted!')
             const remaining = toys.filter((toy) => toy._id !== id);
             setToys(remaining);
           }
