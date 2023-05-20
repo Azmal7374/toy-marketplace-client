@@ -5,7 +5,8 @@ import Sppiner from "../share/Spinner/Sppiner";
 import { Link } from "react-router-dom";
 import useTitle from "../../hooks/UseTitle";
 import UpdateToy from "../UpdateToy/UpdateToy";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const MyToys = () => {
   useTitle("My Toys");
   const { user, loading } = useContext(AuthContext);
@@ -20,6 +21,26 @@ const MyToys = () => {
       });
   }, [user]);
   console.log(toys)
+
+  const handleDelete = (id) => {
+    const proceed = confirm("Are you sure you want to delete");
+
+    if (proceed) {
+      fetch(`http://localhost:5000/allToys/${id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          if (data.deletedCount > 0) {
+            toast('Successfully Deleted!')
+            const remaining = toys.filter((toy) => toy._id !== id);
+            setToys(remaining);
+          }
+        });
+    }
+  };
+
 
 
 
@@ -71,7 +92,7 @@ const MyToys = () => {
                     </th>
                     <th>
                       {" "}
-                      <button className="bg-[#0d80a5] p-1 w-24 rounded-md text-white">
+                      <button onClick={() => handleDelete(toy?._id)}  className="bg-[#0d80a5] p-1 w-24 rounded-md text-white">
                         Delete
                       </button>{" "}
                     </th>
