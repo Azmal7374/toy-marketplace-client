@@ -25,9 +25,10 @@ const Navbar = () => {
   
   return (
     <div className=" sticky top-0 z-30 bg-white">
-      <div className="navbar ml-12 ">
+      <div className="navbar  ml-12 ">
        
-       <img className="w- mx-2" src={logo}  alt="" />
+       <img className="w-20 md:w-24 " src={logo}  alt="" />
+        <h2 className="text-xl md:text-3xl font-bold ml-2">KidsToys</h2>
 
       
         <div className="navbar-end">
@@ -77,7 +78,7 @@ const Navbar = () => {
                 user &&
                 <p className="px-2 py-2">
             <NavLink
-              to='/myToys'
+              to='/MyToys'
               className={({ isActive }) => (isActive ? 'active' : 'default')}
             >
               My Toys
@@ -149,7 +150,7 @@ const Navbar = () => {
                 user && 
                 <p  className="mx-4  my-4">
               <NavLink
-                to='/My Toys'
+                to='/MyToys'
                 className={({ isActive }) => (isActive ? 'active' : 'default')}
               >
                 My Toys
@@ -201,7 +202,7 @@ const Navbar = () => {
            
           </ul>
         </div>
-        <div className="navbar-end mr-20">
+        <div className="navbar-end mr-12 lg:mr-20">
         {
             user &&
             <img className="h-20 w-20  rounded-full" title={user?.displayName} src={user? user.photoURL: ""} />

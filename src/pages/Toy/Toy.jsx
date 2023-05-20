@@ -16,6 +16,9 @@ const Toy = ({toy}) => {
           toast('Please Login Here!')
            navigate('/login')
         }
+        else{
+          navigate('/')
+        }
     }
     return (
         

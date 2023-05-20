@@ -35,7 +35,7 @@ const AllToys = () => {
 
     return (
 
-       <div className=''>
+       <div className='mt-4'>
        <div className="text-center mb-4">
        <input
          onChange={(e) => setSearchText(e.target.value)}
@@ -45,7 +45,7 @@ const AllToys = () => {
        <button className='bg-[#0d80a5] p-1 w-24 rounded-md text-white' onClick={handleSearch}>Search</button>
      </div>
 
-    <div className="">
+    <div className=" p-8">
     <div className="overflow-x-auto ">
     <table className="table table-compact w-full ">
       <thead>
@@ -56,7 +56,7 @@ const AllToys = () => {
           <th>SubCategory</th> 
           <th>Price</th> 
           <th>Quantity</th> 
-          <th><button>View Details</button></th>
+          <th>View Details</th>
         </tr>
       </thead> 
       <tbody>
