@@ -16,7 +16,6 @@ const MyToys = () => {
   const[control, setControl] = useState(false);
   const [toys, setToys] = useState([]);
 
-  // const proceed = confirm("Are you sure you want to delete");
 
   useEffect(() => {
     fetch(`http://localhost:5000/myToys/${user?.email}`)
@@ -29,42 +28,9 @@ const MyToys = () => {
 
   const handleDelete = (id) => {
    
-    const swalWithBootstrapButtons = Swal.mixin({
-      customClass: {
-        confirmButton: ' p-3  bg-[#0d80a5] text-white rounded -md mx-4',
-        cancelButton: ' p-3 bg-[#0d80a5] ml-2 text-white rounded-md'
-      },
-      buttonsStyling: false
-    })
-    
-    swalWithBootstrapButtons.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonText: 'Yes, delete it!',
-      cancelButtonText: 'No, cancel!',
-      reverseButtons: true
-    }).then((result) => {
-      if (result.isConfirmed) {
-        swalWithBootstrapButtons.fire(
-          'Deleted!',
-          'Your file has been deleted.',
-          'success'
-        )
-      } else if (
-        /* Read more about handling dismissals below */
-        result.dismiss === Swal.DismissReason.cancel
-      ) {
-        swalWithBootstrapButtons.fire(
-          'Cancelled',
-          'Your imaginary file is safe :)',
-          'error'
-        )
-      }
-    })
-
-    if (swalWithBootstrapButtons === true) {
+  const proceed = confirm("Are you sure you want to delete");
+     
+    if (proceed) {
       fetch(`http://localhost:5000/allToys/${id}`, {
         method: "DELETE",
       })
@@ -72,6 +38,7 @@ const MyToys = () => {
         .then((data) => {
           console.log(data);
           if (data.deletedCount > 0) {
+            toast('Deleted Successfully!')
             const remaining = toys.filter((toy) => toy._id !== id);
             setToys(remaining);
           }
@@ -101,8 +68,8 @@ const MyToys = () => {
                 <th>Price</th>
                 <th>Quantity</th>
                 <th>Details Description</th>
-                <th>Edit</th>
-                <th>Delete</th>
+                <th>Status</th>
+                <th>Status</th>
               </tr>
             </thead>
             <tbody>

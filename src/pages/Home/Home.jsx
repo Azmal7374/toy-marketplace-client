@@ -8,6 +8,10 @@ import Toys from '../Toys/Toys';
 import useTitle from '../../hooks/UseTitle';
 import { AuthContext } from '../../provider/AuthProvider';
 import Sppiner from '../share/Spinner/Sppiner';
+import Gallery from '../Gallery/Gallery';
+import CategoryFeaturs from '../CategoryFeatures/CategoryFeaturs';
+import Shops from '../Shops/Shops';
+import Testimonial from '../Testimonial/Testimonial';
 const Home = () => {
   useTitle('Home');
   const {user, loading} =useContext(AuthContext)
@@ -38,10 +42,27 @@ const Home = () => {
         </div>
           </section>
 
+          <section className="mt-14">
+          <h2 className="text-3xl md:text-4xl text-center font-bold">CATEGORIES FEATURES</h2>
+          <CategoryFeaturs></CategoryFeaturs>
+          </section>
 
-          <section className='mt-10'>
-          <h2 className='text-center text-3xl font-bold'>Shop By Category</h2>
+          <section className='mt-14'>
+          <h2 className="text-center  text-3xl md:text-4xl font-bold">Kids Toys Gallery</h2>
+          <Gallery></Gallery>
+          </section>
+
+          <section className='mt-14'>
+          <h2 className='text-center text-3xl md:text-4xl font-bold'>Shop By Category</h2>
           <Toys></Toys>
+          </section>
+
+          <section className='mt-14 '>
+          <Shops></Shops>
+          </section>
+
+          <section className='mt-14'>
+          <Testimonial></Testimonial>
           </section>
         </div>
     );

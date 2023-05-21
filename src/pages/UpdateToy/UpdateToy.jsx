@@ -76,7 +76,6 @@ const UpdateToy = () => {
           <textarea
             type="text"
             name="description"
-            defaultValue={name}
             placeholder="Description"
             className=" p-4  w-96"
           />
