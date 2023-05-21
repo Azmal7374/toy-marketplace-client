@@ -11,7 +11,6 @@ import useTitle from "../../../hooks/UseTitle";
 import { AuthContext } from "../../../provider/AuthProvider";
 import logo from "../../../assets/logo.png"
 const Navbar = () => {
-  useTitle('Navbar')
   const { user, logOut } = useContext(AuthContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

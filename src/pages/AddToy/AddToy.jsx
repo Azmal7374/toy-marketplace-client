@@ -11,7 +11,7 @@ const AddToy = () => {
   const onSubmit = data => 
   {
     
-    fetch('http://localhost:5000/postToy',{
+    fetch('https://toy-marketplace-server-azmal7374.vercel.app/postToy',{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

@@ -1,7 +1,9 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import useTitle from "../../hooks/UseTitle";
 const Blog = () => {
+  useTitle('Blog')
   return (
     <div className="mt-10 p-8 pl-20 " data-aos="flip-left"
     data-aos-easing="ease-out-cubic"

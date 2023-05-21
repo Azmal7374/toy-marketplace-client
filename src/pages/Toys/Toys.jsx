@@ -8,7 +8,7 @@ const Toys = () => {
     const [activeTab, setActiveTab] = useState();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allToys/${activeTab}`)
+        fetch(`https://toy-marketplace-server-azmal7374.vercel.app/allToys/${activeTab}`)
         .then(res => res.json())
         .then(result => {
             setToys(result);

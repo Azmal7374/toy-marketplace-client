@@ -12,6 +12,9 @@ import Gallery from '../Gallery/Gallery';
 import CategoryFeaturs from '../CategoryFeatures/CategoryFeaturs';
 import Shops from '../Shops/Shops';
 import Testimonial from '../Testimonial/Testimonial';
+import BlogsPage from '../BlogsPage/BlogsPage';
+import TopProducts from '../TopProducts/TopProducts';
+import BrandLogo from '../BrandLogo/BrandLogo';
 const Home = () => {
   useTitle('Home');
   const {user, loading} =useContext(AuthContext)
@@ -63,8 +66,22 @@ const Home = () => {
           <Shops></Shops>
           </section>
 
-          <section className='mt-14'>
+          <section className='mt-14 '>
           <Testimonial></Testimonial>
+          </section>
+
+          <section className='mt-14'>
+          <h1 className='mt-4 text-3xl md:text-4xl font-bold text-center'>Special PRODUCTS</h1>
+          <TopProducts></TopProducts>
+          </section>
+
+          <section className='mt-14 mb-60'> 
+          <h1 className='mt-4 text-3xl md:text-4xl font-bold text-center'>BLOG</h1>
+          <BlogsPage></BlogsPage>
+          </section>
+
+          <section className="mt-14">
+          <BrandLogo></BrandLogo>
           </section>
         </div>
     );

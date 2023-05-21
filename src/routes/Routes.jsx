@@ -39,7 +39,7 @@ const router = createBrowserRouter([
             {
               path:'/allToys/:id',
               element:<PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-              loader:({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
+              loader:({params}) => fetch(`https://toy-marketplace-server-azmal7374.vercel.app/toys/${params.id}`)
             },
             {
                path:'/MyToys',
@@ -62,7 +62,7 @@ const router = createBrowserRouter([
             {
                 path:'/UpdateToy/:id',
                 element:<UpdatToy></UpdatToy>,
-                loader: ({params}) => fetch(`http://localhost:5000/updateToys/${params.id}`)
+                loader: ({params}) => fetch(`https://toy-marketplace-server-azmal7374.vercel.app/updateToys/${params.id}`)
             }
         ]
     }

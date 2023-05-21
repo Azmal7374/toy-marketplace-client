@@ -7,8 +7,8 @@ const Footer = () => {
   return (
     <div className="mt-20 bg-[#F4D2B6]">
       <div className="pt-12 md:flex justify-center items-center  gap-10 text-center">
-        <div className="flex gap-2 items-center justify-center">
-        <FontAwesomeIcon className="mt-2 fa-2xl" icon={faEnvelope} />
+        <div className="flex gap-2 items-center ">
+        <FontAwesomeIcon className="mt-2 fa-2xl ml-8" icon={faEnvelope} />
           <h2 className="text-3xl font-bold">SUBSCRIBE OUR NEWSLETTER</h2>
         </div>
         <div>
@@ -34,11 +34,10 @@ const Footer = () => {
             <div className="">
               <img data-aos="fade-down" className=" mx-2" src={logo} alt="" />
             </div>
-            <div className="w-96">
+            <div className="w-72 mt-4">
               <p>
                 Online shopping for Toys & Games from a great selection of Toy
-                Basketball, Toy Golf, Toy Soccer, Toy Football, Toy Baseball,
-                Toy Hockey & more at everyday.
+                Basketball, Toy Golf, Toy Soccer, Toy Football, Toy.
               </p>
             </div>
           </div>

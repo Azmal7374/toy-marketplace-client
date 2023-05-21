@@ -8,9 +8,11 @@ import google from '../../assets/google.png';
 import Swal from "sweetalert2";
 import app from '../../firebase/firebase.config';
 import { AuthContext } from '../../provider/AuthProvider';
+import useTitle from '../../hooks/UseTitle';
  
 
 const Login = () => {
+  useTitle('Login')
   const auth = getAuth(app);
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider()

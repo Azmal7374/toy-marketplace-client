@@ -11,7 +11,7 @@ const AllToys = () => {
     const{user, loading} = useContext(AuthContext)
     const [toys, setToys] =useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/allToys')
+        fetch('https://toy-marketplace-server-azmal7374.vercel.app/allToys')
         .then(res => res.json())
         .then(data => {
              setToys(data);
@@ -19,7 +19,7 @@ const AllToys = () => {
     },[])
 
     const handleSearch = () => {
-        fetch(`http://localhost:5000/toySearchByName/${searchText}`)
+        fetch(`https://toy-marketplace-server-azmal7374.vercel.app/toySearchByName/${searchText}`)
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
