@@ -2,7 +2,7 @@ import React from 'react';
 
 const CategoryFeaturs = () => {
     return (
-        <div className=" mt-6 flex gap-8 flex-wrap justify-center">
+        <div className=" mt-6 flex gap-8 flex-wrap justify-center" data-aos="fade-up">
          <div>
          <img src="https://templatebunch.com/Opencart/OPC003/OPCTB22/OPC01/image/cache/catalog/demo/banners/categories-img-01-120x120.jpg" alt="" />  
          <h2>Soft Toys</h2>

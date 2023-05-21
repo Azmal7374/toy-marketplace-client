@@ -27,7 +27,7 @@ const Navbar = () => {
     <div className=" sticky top-0 z-30 bg-white">
       <div className="navbar  ml-12 ">
        
-       <img className="w-20 md:w-24 " src={logo}  alt="" />
+       <img data-aos="fade-down" className="w-20 md:w-24 " src={logo}  alt="" />
         <h2 className="text-xl md:text-3xl font-bold ml-2">KidsToys</h2>
 
       
@@ -202,7 +202,7 @@ const Navbar = () => {
            
           </ul>
         </div>
-        <div className="navbar-end mr-12 lg:mr-20">
+        <div className="navbar-end mr-12 lg:mr-20" data-aos="fade-down">
         {
             user &&
             <img className="h-20 w-20  rounded-full" title={user?.displayName} src={user? user.photoURL: ""} />

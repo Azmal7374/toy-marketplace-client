@@ -21,7 +21,9 @@
           
           <div className="-m-1 flex flex-wrap md:-m-2">
             {images.map((image, index) => (
-              <div key="{index}" className="flex w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-1 md:p-2">
+              <div key="{index}" className="flex w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-1 md:p-2" data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000">
                 <img className="block mx-auto h-full object-cover object-center rounded-lg shadow-md" src={image}/>
               </div>
             ))}

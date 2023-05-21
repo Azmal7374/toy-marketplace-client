@@ -32,7 +32,7 @@ const Footer = () => {
         <div className="lg:flex   p-8">
           <div className="">
             <div className="">
-              <img className=" mx-2" src={logo} alt="" />
+              <img data-aos="fade-down" className=" mx-2" src={logo} alt="" />
             </div>
             <div className="w-96">
               <p>

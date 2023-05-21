@@ -20,7 +20,9 @@ const Home = () => {
   }
     return (
         <div>
-        <section className="bg-white">
+        <section className="bg-white" data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
         <div className="grid md:grid-cols-2 gap-5 p-4">
         <div className=" mt-10 md:mt-32">
         <h2 className='text-4xl ml-10 mr-10 text-gray-600 '>Lets Play Any Time</h2>
@@ -52,12 +54,12 @@ const Home = () => {
           <Gallery></Gallery>
           </section>
 
-          <section className='mt-14'>
+          <section className='mt-14' >
           <h2 className='text-center text-3xl md:text-4xl font-bold'>Shop By Category</h2>
           <Toys></Toys>
           </section>
 
-          <section className='mt-14 '>
+          <section className='mt-14 p-8'>
           <Shops></Shops>
           </section>
 

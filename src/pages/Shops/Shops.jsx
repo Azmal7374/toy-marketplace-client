@@ -2,10 +2,10 @@ import React from 'react';
 
 const Shops = () => {
     return (
-        <div className='grid md:grid-cols-2'>
+        <div className='p-4 grid md:grid-cols-2 ' >
             <div className="flex">
             <div className="">
-            <img className="h-72 w-96" src="https://templatebunch.com/Opencart/OPC003/OPCTB22/OPC01/image/catalog/demo/banners/tb-sub-banner-img-01.jpg" alt="" />
+            <img data-aos="fade-up" className="h-72 w-96" src="https://templatebunch.com/Opencart/OPC003/OPCTB22/OPC01/image/catalog/demo/banners/tb-sub-banner-img-01.jpg" alt="" />
             </div>
             <div className="text-center bg-[#FEB60C] text-white p-3 w-96 h-72 font-semibold">
             <h2>TOYS SHOP</h2>
@@ -19,7 +19,7 @@ const Shops = () => {
 
             <div className="flex">
             <div className="">
-            <img className="h-72 w-96" src="https://templatebunch.com/Opencart/OPC003/OPCTB22/OPC01/image/catalog/demo/banners/tb-sub-banner-img-03.jpg" alt="" />
+            <img data-aos="fade-down" className="h-72 w-96" src="https://templatebunch.com/Opencart/OPC003/OPCTB22/OPC01/image/catalog/demo/banners/tb-sub-banner-img-03.jpg" alt="" />
             </div>
             <div className="text-center bg-[#E92876] text-white p-3 w-96 h-72 font-semibold">
             <h2>TEDDY BEAR</h2>
@@ -30,7 +30,7 @@ const Shops = () => {
             </div>
             </div>
 
-            <div className="flex">
+            <div className="flex" >
           
             <div className="text-center bg-[#E92876] text-white p-3 w-96 h-72 font-semibold">
             <h2>CHUBBY TOYS</h2>
@@ -39,8 +39,8 @@ const Shops = () => {
        <button  className='bg-[#0d80a5] p-3 w-40  rounded-md mt-8 text-white font-bold  '>Shop Now</button>
 
             </div>
-            <div className="">
-            <img className="h-72 w-96" src="https://templatebunch.com/Opencart/OPC003/OPCTB22/OPC01/image/catalog/demo/banners/tb-sub-banner-img-02.jpg" alt="" />
+            <div className="" data-aos="fade-up">
+            <img  className="h-72 w-96" src="https://templatebunch.com/Opencart/OPC003/OPCTB22/OPC01/image/catalog/demo/banners/tb-sub-banner-img-02.jpg" alt="" />
             </div>
             </div>
 
@@ -54,7 +54,7 @@ const Shops = () => {
        <button  className='bg-[#0d80a5] p-3 w-40  rounded-md mt-8 text-white font-bold  '>Shop Now</button>
 
             </div>
-            <div className="">
+            <div className="" data-aos="fade-down">
             <img className="h-72 w-96" src="https://templatebunch.com/Opencart/OPC003/OPCTB22/OPC01/image/catalog/demo/banners/tb-sub-banner-img-04.jpg" alt="" />
             </div>
             </div>

@@ -23,7 +23,7 @@ const Toy = ({toy}) => {
     return (
         
         <div className= "px-8">
-         <img className="w-60 h-60 relative " src={picture} alt="" />
+         <img data-aos="fade-up" className="w-60 h-60 relative " src={picture} alt="" />
       
         
          <Rating className="absolute bottom-8 left-16"

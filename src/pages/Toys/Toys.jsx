@@ -23,15 +23,15 @@ const Toys = () => {
         <div className='text-center mt-10'>
         <Tabs>
         <TabList>
-          <Tab>  <button  onClick={() => handleTabClick("softToys")}
+          <Tab >  <button data-aos="zoom-in"  onClick={() => handleTabClick("softToys")}
           className={`border rounded-md p-4 ${
             activeTab == "softToys" ? " bg-[#0d80a5]  text-white" : ""
           }`}>Soft Toys</button></Tab>
-          <Tab> <button  onClick={() => handleTabClick("arts&Crafts")}
+          <Tab> <button data-aos="fade-up"  onClick={() => handleTabClick("arts&Crafts")}
           className={` border  rounded-md p-4 ${
             activeTab == "arts&Crafts" ? " bg-[#0d80a5] text-white" : ""
           }`}>Arts & Crafts</button></Tab>
-          <Tab><button  onClick={() => handleTabClick("toddlerToys")}
+          <Tab><button data-aos="zoom-in"   onClick={() => handleTabClick("toddlerToys")}
           className={`border   rounded-md p-4 ${
             activeTab == "toddlerToys" ? " bg-[#0d80a5] text-white" : ""
           }`}>Toddler Toys</button></Tab>

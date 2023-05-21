@@ -3,7 +3,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 const Blog = () => {
   return (
-    <div className="mt-10 p-8">
+    <div className="mt-10 p-8 pl-20 " data-aos="flip-left"
+    data-aos-easing="ease-out-cubic"
+    data-aos-duration="2000">
       <Carousel className="p-12 bg-[#0d80a5]">
         
         <div className="">

@@ -21,7 +21,7 @@ const ToyDetails = () => {
         <div className='mt-10 p-8'>
             <div className="lg:flex">
             <div>
-            <img className="w-4/5 lg:w-auto lg:h-screen " src={picture} alt="" />
+            <img data-aos="zoom-in"  className="w-4/5 lg:w-auto lg:h-screen " src={picture} alt="" />
             </div>
             <div className='bg-slate-200 w-4/5 lg:h-screen   p-8'>
             <p className="text-2xl">Seller Name: <span className=" font-bold">{sellerName}</span></p> 
