@@ -130,20 +130,20 @@ const Register = () => {
     <div className="md:flex md:items-center">
       <div className="md:w-1/3"></div>
       <div className="md:w-2/3">
-        <input className="shadow w-full bg-orange-600 hover:bg-orange-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit" value="Sign Up" />
+        <input className="shadow w-full bg-[#0D80A5] focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit" value="Sign Up" />
       </div>
     </div>
   </form>
   </div>
-  <p className="flex justify-center mt-3 md:ml-24">Already have account?<Link to='/login' className='text-orange-500 mx-1'> Login</Link></p>
+  <p className="flex justify-center mt-3 md:ml-24">Already have account?<Link to='/login' className='text-[#0D80A5] mx-1'> Login</Link></p>
   <p className=" flex justify-center text-orange-400 font-bold text-shadow mt-3">{error}</p>
   <p className='flex justify-center text-success font-bold text-shadow mt-3'>{success}</p>
     </div>
 
     <div className="my-container text-center my-auto">
-     <h1 className='text-3xl text-white font-bold'>Toy MarketPlace</h1>
-     <p className='text-white mt-4'>Advance your career with JobBoard . Meet thousands of job announcements and employers. Sign up for job alerts and be first in line for the latest jobs that match your profile.</p>
-    <Link to='/login'> <button  className="mt-4 shadow  bg-orange-600 hover:bg-orange-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">Login</button></Link>
+     <h1 className='text-3xl text-white font-bold'>Kids Toys</h1>
+     <p className='text-white mt-4'>Online shopping for Toys & Games from a great selection of Toy Basketball, Toy Golf, Toy Soccer, Toy Football, Toy Baseball, Toy Hockey & more at everyday.Based on the original concept created by Gixer Entertainment , Toy Sports is a fun party game for the whole family.</p>
+    <Link to='/login'> <button  className="mt-4 shadow  bg-[#0D80A5]  focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">Login</button></Link>
     </div>
     </div>
     

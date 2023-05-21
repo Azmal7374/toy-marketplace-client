@@ -159,14 +159,14 @@ const Login = () => {
     <div className="md:flex md:items-center mt-4">
       <div className="md:w-1/3"></div>
       <div className="md:w-2/3">
-      <input className="shadow w-full bg-orange-600 hover:bg-orange-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit" value="Login" />
+      <input className="shadow w-full bg-[#0D80A5] focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit" value="Login" />
       </div>
     </div>
     
   </form>
   </div>
   
-  <p className="flex md:justify-center mt-2 md:ml-28 ">Don't have account?<Link to='/register' className='text-orange-500 mx-1'>Sign up</Link></p>
+  <p className="flex md:justify-center mt-2 md:ml-28 ">Don't have account?<Link to='/register' className='text-[#0D80A5] mx-1'>Sign up</Link></p>
   <p className=" flex justify-center text-danger font-bold text-shadow mt-4">{error}</p>
 <p className='flex justify-center text-success font-bold text-shadow mt-4'>{success}</p>
 <div className='flex  gap-4 justify-center'>
@@ -175,9 +175,9 @@ const Login = () => {
 
 </div>
     <div className="my-container text-center my-auto">
-    <h1 className='text-3xl text-white font-bold'>Toy MarketPlace</h1>
+    <h1 className='text-3xl text-white font-bold'>Kids Toys</h1>
     <p className='text-white mt-4'>Advance your career with JobBoard . Meet thousands of job announcements and employers. Sign up for job alerts and be first in line for the latest jobs that match your profile.</p>
-   <Link to='/register'> <button  className="mt-4 shadow  bg-orange-600 hover:bg-orange-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">Sign Up</button></Link>
+   <Link to='/register'> <button  className="mt-4 shadow  bg-[#0D80A5] focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">Sign Up</button></Link>
    </div>
     </div>
     </div>
